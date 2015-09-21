@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6AF00FEE1BAF133900D7AA7C /* MMMarkdownHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF00FED1BAF133900D7AA7C /* MMMarkdownHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6AF00FEF1BAF133900D7AA7C /* MMMarkdownHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AF00FED1BAF133900D7AA7C /* MMMarkdownHeader.h */; settings = {ASSET_TAGS = (); }; };
 		BED761621B374D6700687B36 /* MMMarkdown.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BED761571B374D6700687B36 /* MMMarkdown.framework */; };
 		BED761701B374E9C00687B36 /* MMMarkdown.h in Headers */ = {isa = PBXBuildFile; fileRef = BE813DE214F893EB00EC9469 /* MMMarkdown.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BED761711B374E9C00687B36 /* MMMarkdown.m in Sources */ = {isa = PBXBuildFile; fileRef = BE813DE314F893EB00EC9469 /* MMMarkdown.m */; };
@@ -236,6 +238,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6AF00FED1BAF133900D7AA7C /* MMMarkdownHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMMarkdownHeader.h; sourceTree = "<group>"; };
+		6AF00FF01BAF15C200D7AA7C /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		BE1DB5D41514184000B26092 /* MMSpanTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMSpanTests.m; sourceTree = "<group>"; };
 		BE1DB5D915143F4200B26092 /* MMBlockTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMBlockTests.m; sourceTree = "<group>"; };
 		BE1DB5DC1515032F00B26092 /* MMLinkTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLinkTests.m; sourceTree = "<group>"; };
@@ -425,6 +429,8 @@
 				BE813E9114FACF0C00EC9469 /* MMScanner.m */,
 				BEF3421A150CEA6D00BFA0E2 /* MMSpanParser.h */,
 				BEF3421B150CEA6D00BFA0E2 /* MMSpanParser.m */,
+				6AF00FED1BAF133900D7AA7C /* MMMarkdownHeader.h */,
+				6AF00FF01BAF15C200D7AA7C /* module.modulemap */,
 				BED7615A1B374D6700687B36 /* Info.plist */,
 			);
 			path = Source;
@@ -564,6 +570,7 @@
 				BED761731B374E9C00687B36 /* MMDocument.h in Headers */,
 				BED761781B374E9C00687B36 /* MMGenerator.h in Headers */,
 				BED761741B374E9C00687B36 /* MMDocument_Private.h in Headers */,
+				6AF00FEF1BAF133900D7AA7C /* MMMarkdownHeader.h in Headers */,
 				BED761761B374E9C00687B36 /* MMElement.h in Headers */,
 				BED7617E1B374E9C00687B36 /* MMScanner.h in Headers */,
 			);
@@ -581,6 +588,7 @@
 				BED762321B37819D00687B36 /* MMHTMLParser.h in Headers */,
 				BED762361B37819D00687B36 /* MMScanner.h in Headers */,
 				BED7622B1B37819D00687B36 /* MMDocument.h in Headers */,
+				6AF00FEE1BAF133900D7AA7C /* MMMarkdownHeader.h in Headers */,
 				BED762281B37819D00687B36 /* MMMarkdown.h in Headers */,
 				BED762341B37819D00687B36 /* MMParser.h in Headers */,
 			);
@@ -848,7 +856,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -883,7 +891,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -968,7 +976,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -982,7 +990,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Source/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MMMarkdown;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
@@ -1003,7 +1013,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = NO;
+				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -1014,7 +1024,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = Source/module.modulemap;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = MMMarkdown;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
